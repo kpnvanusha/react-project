@@ -1,0 +1,41 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "this is a amazing react project by Anusha KPNV",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpnvanusha/react-project.git"
+  },
+  "keywords": [
+    "react",
+    "amazing",
+    "react",
+    "project",
+    "Anusha",
+    "KPNV"
+  ],
+  "author": "Anusha KPNV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpnvanusha/react-project/issues"
+  },
+  "homepage": "https://github.com/kpnvanusha/react-project#readme",
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.13.3",
+    "less": "^4.2.2",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}

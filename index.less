@@ -1,0 +1,87 @@
+#root #heading {
+    color: #ff0000;
+}
+.header-component{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+        margin: 0 0 10px 0;
+    .nav-container {
+        .header-nav{
+            display: flex;
+            margin-right: 20px;
+            .nav-item{
+                padding: 10px 20px;
+                list-style-type: none;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+.body-container{
+    margin: 10px;
+    .search-container{
+        margin-bottom: 10px;
+        .search-box{
+            margin-right: 20px;
+        }
+    }
+    .shimmer-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        gap:32px;
+        .shimmer-card {
+            flex: 1 1 calc((100% / 5) - 80px);
+            max-width: calc((100% / 5) - 80px);
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #f0f0f0;
+            width: 250px;
+            height: 350px;
+        }
+    }
+    .cards-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        gap:32px;
+        .card-container {
+            flex: 1 1 calc((100% / 5) - 80px);
+            max-width: calc((100% / 5) - 80px);
+            padding: 10px;
+            
+            border: 1px solid black;
+            background-color: aliceblue;
+            cursor: pointer;
+            .card-type{
+
+                word-break: break-word;
+            }
+            &:hover{
+                box-shadow: 5px 5px 10px gray;
+            }
+        }
+    }
+    
+}
+.outer{
+    background-color: black;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    .inner {
+        width: 10%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: white;
+        transition: width 1s ease-in-out; 
+    }
+}
