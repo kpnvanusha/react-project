@@ -77,10 +77,7 @@ const appRouter = createBrowserRouter([
                 'path' : '/tictactoe',
                 'element':<TicTacToe />,
             },
-            {
-                'path' : '/aboutus',
-                'element':<AboutUs />,
-            },
+
             
         ],
         'errorElement': <ErrorPage />,
