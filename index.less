@@ -5,7 +5,11 @@
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
         margin: 0 0 10px 0;
+        .app-logo{
+            height: 80px;
+        }
     .nav-container {
         .header-nav{
             display: flex;
@@ -52,6 +56,10 @@
         list-style-type: none;
         padding: 0;
         gap:32px;
+        text-decoration: none;
+        .card{
+            display: contents;
+        }
         .card-container {
             flex: 1 1 calc((100% / 5) - 80px);
             max-width: calc((100% / 5) - 80px);
@@ -78,7 +86,7 @@
     border: 1px solid black;
     border-radius: 5px;
     .inner {
-        width: 10%;
+        width: 0%;
         height: 100%;
         border-radius: 5px;
         background-color: white;

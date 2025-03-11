@@ -5,6 +5,11 @@ import { Body } from './components/Body';
 import ProgressBar from './components/ProgressBar';
 import TicTacToe from './components/TicTacToe';
 import Counter from './components/Counter';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import ErrorPage from './components/ErrorPage';
+import RestaurantMenu from './components/RestaurantMenu';
 
 //const heading = React.createElement('h1', {'id': 'heading','className':'main-heading'}, 'Hello React using library from external file');
 //const jsxHeading = (<h1 className='heading-container'>This is using JSX </h1>);
@@ -26,15 +31,59 @@ import Counter from './components/Counter';
 // }
 // root.render(<ReactHeading/>);
 const app = ReactDOM.createRoot(document.getElementById('app'));
+
 const App = () => {
+    
     return (<>
         <Header/>
-        <Body/>
-        {/* <Footer/> */}
-        <h1>this is a test</h1>
-        <ProgressBar/>
-        <TicTacToe/>
-        <Counter/>
+        <Outlet />
     </>)
 }
-app.render(<App/>);
+const appRouter = createBrowserRouter([
+    {
+        'path' : '/',
+        'element':<App/>,   
+        'children': [
+            {
+                'path' : '/',
+                'element':<Body />,
+            },
+            {
+                'path' : '/contactus',
+                'element':<ContactUs />,
+            },
+            {
+                'path' : '/aboutus',
+                'element':<AboutUs />,
+            },
+            {
+                'path' : '*',
+                'element' : <ErrorPage />,
+            },
+            {
+                'path' : '/restaurants/:resId',
+                'element' : <RestaurantMenu />,
+            },
+            // other react components
+            {
+                'path' : '/counter',
+                'element':<Counter />,
+            },
+            {
+                'path' : '/progressbar',
+                'element':<ProgressBar />,
+            },
+            {
+                'path' : '/tictactoe',
+                'element':<TicTacToe />,
+            },
+            {
+                'path' : '/aboutus',
+                'element':<AboutUs />,
+            },
+            
+        ],
+        'errorElement': <ErrorPage />,
+    },
+]);
+app.render(<RouterProvider router={appRouter}/>);
